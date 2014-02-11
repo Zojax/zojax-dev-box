@@ -46,7 +46,7 @@ for your Ubuntu:
 
     $ mkdir /home/YOUR-USER/workspace/zojax
 
-    $ sudo tee -a /etc/fstab <<<'192.168.33.1:/home/vagrant/zojax  /home/USER/workspace/zojax/files  nfs   rw,async 0 0'>/dev/null
+    $ sudo tee -a /etc/fstab <<<'192.168.33.10:/home/vagrant/zojax  /home/USER/workspace/zojax/files  nfs   rw,async 0 0'>/dev/null
 
     $ sudo mount /home/YOUR-USER/workspace/zojax
 
@@ -56,12 +56,12 @@ for your MacOS:
 
 In Finder, go to: `Go → Connect to Server...` and, in the **Server Address box**, enter:
 
-    nfs://192.168.33.1/home/vagrant/zojax
+    nfs://192.168.33.10/home/vagrant/zojax
 
 
 or use nfs manager
 
-    192.168.33.1:/home/vagrant on /Users/USER/workspace/zojax/files (nfs, nodev, nosuid, automounted, noowners)
+    192.168.33.10:/home/vagrant on /Users/USER/workspace/zojax/files (nfs, nodev, nosuid, automounted, noowners)
 
 
 Copy your ssh Key
@@ -70,7 +70,7 @@ Copy your ssh Key
 
 Assuming you have SSH keys on your host machine, you should be able to copy them to the VM with
 
-    $ scp ~/.ssh/id_rsa vagrant@192.168.33.1:~/.ssh/id_rsa
+    $ scp ~/.ssh/id_rsa vagrant@192.168.33.10:~/.ssh/id_rsa
 
 *password: vagrant*
 
